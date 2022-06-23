@@ -8,3 +8,6 @@
 .idea/
 .github/
 node_modules/
+package-lock.json
+m_seed_key
+
