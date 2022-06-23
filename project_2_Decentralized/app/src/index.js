@@ -33,6 +33,7 @@ const App = {
 
   createStar: async function() {
     const { createStar } = this.meta.methods;
+
     const name = document.getElementById("starName").value;
     const id = document.getElementById("starId").value;
     await createStar(name, id).send({from: this.account});
@@ -41,7 +42,12 @@ const App = {
 
   // Implement Task 4 Modify the front end of the DAPP
   lookUp: async function (){
-    
+    const {lookUptokenIdToStarInfo} = this.meta.methods;
+
+    const id = document.getElementById("lookid").value;
+    let name = await lookUptokenIdToStarInfo(id).call();
+
+    App.setStatus("Star name:" + name + ".");
   }
 
 };
