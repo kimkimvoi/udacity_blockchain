@@ -1,0 +1,10 @@
+# Package Files #
+*.jar
+*.war
+*.ear
+
+### JetBrains
+*.iml
+.idea/
+.github/
+node_modules/
